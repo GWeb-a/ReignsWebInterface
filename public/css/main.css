@@ -1,0 +1,100 @@
+body {
+    background-color: #C1A767;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Yeon Sung', cursive;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+#logo {
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#logo > img {
+    width: 100%;
+}
+
+.login-block {
+    width: 50vw;
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    color: #565656;
+    padding: 20px;
+    -moz-border-radius : 5px;
+    -webkit-border-radius : 5px;
+    border-radius : 5px;
+    text-align: center;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.login-block > h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #A08441;
+}
+
+.login-block > form > #login > div > label {
+    display: none;
+}
+
+.login-block > form > #login > div > input {
+    display: block;
+    border: 0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 80%;
+    height: 35px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+.login-block > form > #login > div > input:focus {
+    outline: none;
+}
+
+#login_save {
+    background-color: #A08441;
+    color: #fff;
+    border: 1px solid #A08441;
+    font-size: 1.1em;
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+    -moz-border-radius : 5px;
+    -webkit-border-radius : 5px;
+    border-radius : 5px;
+    width: 80%;
+    cursor: pointer;
+}
+
+#login_save:hover {
+    background-color: #7F6421;
+    border: 1px solid #7F6421;
+}
+
+.no-account {
+    margin-top: 30px;
+}
+
+.no-account > a {
+    margin-top: 30px;
+    color: #A08441;
+}
+
+.no-account > a:hover {
+    color: #7F6421;
+    text-decoration: none;
+}
