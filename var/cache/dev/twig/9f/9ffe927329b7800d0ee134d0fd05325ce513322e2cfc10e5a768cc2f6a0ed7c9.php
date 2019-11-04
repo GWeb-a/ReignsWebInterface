@@ -60,29 +60,36 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
         <!-- Google fonts -->
         <link href=\"https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap\" rel=\"stylesheet\">
 
+        <link rel=\"icon\"
+              type=\"image/png\"
+              href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
+        echo "\">
+
         <title>";
-        // line 14
+        // line 18
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         ";
-        // line 15
+        // line 19
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 16
+        // line 20
         echo "    </head>
     <body>
         ";
-        // line 18
+        // line 22
         $this->displayBlock('body', $context, $blocks);
-        // line 19
+        // line 23
         echo "        <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
         ";
-        // line 24
+        // line 28
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 25
+        // line 29
         echo "    </body>
 </html>
 ";
@@ -94,7 +101,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
 
     }
 
-    // line 14
+    // line 18
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -113,7 +120,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
 
     }
 
-    // line 15
+    // line 19
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -131,7 +138,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
 
     }
 
-    // line 18
+    // line 22
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -149,7 +156,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
 
     }
 
-    // line 24
+    // line 28
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -179,7 +186,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
 
     public function getDebugInfo()
     {
-        return array (  153 => 24,  135 => 18,  117 => 15,  98 => 14,  86 => 25,  84 => 24,  77 => 19,  75 => 18,  71 => 16,  69 => 15,  65 => 14,  57 => 9,  47 => 1,);
+        return array (  160 => 28,  142 => 22,  124 => 19,  105 => 18,  93 => 29,  91 => 28,  84 => 23,  82 => 22,  78 => 20,  76 => 19,  72 => 18,  67 => 16,  57 => 9,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -196,6 +203,10 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
 
         <!-- Google fonts -->
         <link href=\"https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap\" rel=\"stylesheet\">
+
+        <link rel=\"icon\"
+              type=\"image/png\"
+              href=\"{{ asset('img/logo.png') }}\">
 
         <title>{% block title %}Reigns Web Interface{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
