@@ -46,11 +46,11 @@ body {
     color: #A08441;
 }
 
-.login-block > form > #login > div > label {
+.login-block > form > label {
     display: none;
 }
 
-.login-block > form > #login > div > input {
+.login-block > form > input {
     display: block;
     border: 0;
     border-bottom: 1px solid #e0e0e0;
@@ -60,10 +60,13 @@ body {
     margin-bottom: 30px;
     padding: 5px;
     font-size: 1.1em;
+    border-radius: 0;
 }
 
-.login-block > form > #login > div > input:focus {
-    outline: none;
+.login-block > form > input.form-control:focus {
+    outline: none !important;
+    box-shadow: none;
+    border-bottom: 1px solid #A08441;
 }
 
 #login_save {
