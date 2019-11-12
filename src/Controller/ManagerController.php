@@ -24,7 +24,7 @@ class ManagerController extends AbstractController {
      * @Route("/manager/", name="manager_home")
      */
     public function index() {
-        return $this->render('manager/index.html.twig', [
+        return $this->render('authenticated/manager/index.html.twig', [
 
         ]);
     }

@@ -29,6 +29,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
+            'nav' => [$this, 'block_nav'],
             'body' => [$this, 'block_body'],
             'javascripts' => [$this, 'block_javascripts'],
         ];
@@ -79,17 +80,20 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
     <body>
         ";
         // line 22
-        $this->displayBlock('body', $context, $blocks);
+        $this->displayBlock('nav', $context, $blocks);
         // line 23
+        echo "        ";
+        $this->displayBlock('body', $context, $blocks);
+        // line 24
         echo "        <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
         ";
-        // line 28
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 29
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 30
         echo "    </body>
 </html>
 ";
@@ -139,6 +143,24 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
     }
 
     // line 22
+    public function block_nav($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "nav"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "nav"));
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 23
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -156,7 +178,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
 
     }
 
-    // line 28
+    // line 29
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -186,7 +208,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
 
     public function getDebugInfo()
     {
-        return array (  160 => 28,  142 => 22,  124 => 19,  105 => 18,  93 => 29,  91 => 28,  84 => 23,  82 => 22,  78 => 20,  76 => 19,  72 => 18,  67 => 16,  57 => 9,  47 => 1,);
+        return array (  182 => 29,  164 => 23,  146 => 22,  128 => 19,  109 => 18,  97 => 30,  95 => 29,  88 => 24,  85 => 23,  83 => 22,  79 => 20,  77 => 19,  73 => 18,  68 => 16,  58 => 9,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -212,6 +234,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        {% block nav %}{% endblock %}
         {% block body %}{% endblock %}
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,0 +1,48 @@
+@media (max-width: 992px) {
+    /* Nav */
+    .nav-link {
+        text-align: center;
+        color: #6293B8;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-top: 2px dashed #f1f2f3;
+        background-color: #E7D29D;
+    }
+
+    .navbar-nav > .nav-item:first-child > .nav-link {
+        border-top: 2px solid #f1f2f3;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #FFEC91;
+    }
+
+    .navbar-light .navbar-toggler {
+        border: 0;
+    }
+
+    .navbar button:focus {
+        outline: none;
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        background: url('../../../img/menu.png');
+        width: 26px;
+        height: 26px;
+    }
+
+    .navbar-light .navbar-nav .active>.nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show>.nav-link {
+        border-bottom: 0;
+        background-color: #ABCAE0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Card */
+    .card {
+        margin-bottom: 20px;
+    }
+}

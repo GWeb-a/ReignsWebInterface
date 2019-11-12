@@ -1,0 +1,9 @@
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'McLaren', cursive;
+}

@@ -1,0 +1,46 @@
+.navbar {
+    padding: 0;
+    background-color: #C1A767 !important;
+}
+
+.navbar > .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.7em;
+    color: #f8f9fa;
+    margin-left: 10px;
+    line-height: 45px;
+}
+
+.navbar > .navbar-brand:hover {
+    color: #f8f9fa;
+}
+
+.navbar > .navbar-brand > .gold {
+    color: #EDCE40;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #f8f9fa;
+    line-height: 28px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #EDCE40;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #FFEAAC;
+}
