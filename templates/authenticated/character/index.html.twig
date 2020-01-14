@@ -1,0 +1,23 @@
+{% extends 'authenticated/base.html.twig' %}
+
+{% block list %}
+    {% set i = 0 %}
+    <div class="row">
+    {% for character in characters %}
+        {% if i % 3 == 0 and i != 0 %}
+            <div class="row">
+        {% endif %}
+        <div class="col-md-4">
+            <div class="card m-3">
+                <img class="card-img-top" src="{{ character.img }}" alt="Card image cap">
+                <div class="card-body">
+                    <h3>{{ character.queryName }}</h3>
+                </div>
+            </div>
+        </div>
+        {% set i = i + 1 %}
+        {% if i % 3 == 0 and i != 0 %}
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

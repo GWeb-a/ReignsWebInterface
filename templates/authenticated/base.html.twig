@@ -4,9 +4,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/authenticated/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/authenticated/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/authenticated/tabs.css') }}">
     <link rel="stylesheet" href="{{ asset('css/authenticated/media/max-992px.css') }}">
 {% endblock %}
 
 {% block nav %}
     {% include 'authenticated/nav.html.twig' %}
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid p-4">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home" class="active">Liste des {{ type }}s</a></li>
+            <li><a data-toggle="tab" href="#menu1">Ajout {{ type }}</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active show">
+                {% block list %}{% endblock %}
+
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                {% block add %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    </div>
 {% endblock %}

@@ -15,7 +15,10 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception::showAction'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
-    'manager_home' => [[], ['_controller' => 'App\\Controller\\ManagerController::index'], [], [['text', '/manager/']], [], []],
+    'card_home' => [[], ['_controller' => 'App\\Controller\\CardController::index'], [], [['text', '/cards/']], [], []],
+    'character_home' => [[], ['_controller' => 'App\\Controller\\CharacterController::index'], [], [['text', '/characters/']], [], []],
+    'end_home' => [[], ['_controller' => 'App\\Controller\\EndController::index'], [], [['text', '/ends/']], [], []],
+    'extra_home' => [[], ['_controller' => 'App\\Controller\\ExtraController::index'], [], [['text', '/extra/']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
 ];

@@ -1,0 +1,30 @@
+{% extends 'authenticated/base.html.twig' %}
+
+{% block list %}
+    {% set i = 0 %}
+    <div class="row">
+    {% for card in cards %}
+        {% if i % 3 == 0 and i != 0 %}
+            <div class="row">
+        {% endif %}
+        <div class="col-md-4">
+            <div class="card m-3">
+                {#<img class="card-img-top" src="..." alt="Card image cap">#}
+                <div class="card-body">
+                    <h3>{{ card.name }}</h3>
+                    <p class="card-text">{{ card.description }}</p>
+                    <p class="card-text">
+                        <img class="effects" src="{{ asset('img/religion.png') }}" alt="Religion"> {{ card.effect_generale['religion'] }}
+                        <img class="effects" src="{{ asset('img/armee.png') }}" alt="Religion"> {{ card.effect_generale['army'] }}
+                        <img class="effects" src="{{ asset('img/population.png') }}" alt="Religion"> {{ card.effect_generale['population'] }}
+                        <img class="effects" src="{{ asset('img/argent.png') }}" alt="Religion"> {{ card.effect_generale['argent'] }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% set i = i + 1 %}
+        {% if i % 3 == 0 and i != 0 %}
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

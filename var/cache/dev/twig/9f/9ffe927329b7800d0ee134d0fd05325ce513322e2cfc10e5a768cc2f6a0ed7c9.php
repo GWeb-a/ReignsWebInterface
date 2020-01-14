@@ -59,7 +59,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
         echo "\">
 
         <!-- Google fonts -->
-        <link href=\"https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap\" rel=\"stylesheet\">
+        <link href=\"https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap\" rel=\"stylesheet\">
 
         <link rel=\"icon\"
               type=\"image/png\"
@@ -224,7 +224,7 @@ class __TwigTemplate_a86e112d10921dc41b9508e007c88acbfe1a70446024adfc6f6ac537b04
         <link rel=\"stylesheet\" href=\"{{ asset('css/main.css') }}\">
 
         <!-- Google fonts -->
-        <link href=\"https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap\" rel=\"stylesheet\">
+        <link href=\"https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap\" rel=\"stylesheet\">
 
         <link rel=\"icon\"
               type=\"image/png\"

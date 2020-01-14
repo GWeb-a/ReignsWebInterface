@@ -1,0 +1,28 @@
+.nav-tabs {
+    border-bottom: 1px solid #C1A767;
+}
+
+.nav-tabs > li {
+    margin: 10px;
+    margin-left: 0;
+    margin-bottom: 9px;
+}
+
+.nav-tabs > li > a {
+    padding: 10px;
+    color: black;
+}
+
+.nav-tabs > li > a:hover {
+    text-decoration: none;
+}
+
+.nav-tabs > li > a.active {
+    border-radius: 7px 7px 0 0;
+    background-color: #C1A767;
+    color: white;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
