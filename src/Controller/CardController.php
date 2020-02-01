@@ -26,6 +26,7 @@ class CardController extends AbstractController {
      */
     public function index(ReignsAPI $reignsAPI) {
         $cards = $reignsAPI->getComponent('cards');
+
         return $this->render('authenticated/card/index.html.twig', [
             'cards' => $cards,
             'type' => 'carte'
