@@ -18,6 +18,18 @@ class ExtraController extends AbstractController {
      * @Route("/extra/", name="extra_home")
      */
     public function index(ReignsAPI $reignsAPI) {
+        $jsonArray = [
+            'name' => 'objecttest',
+            'queryName' => 'objecttest',
+            'description' => 'a simple object description',
+            'effect' => [
+                'religion' => 10,
+                'army' => 20,
+                'population' => 10,
+                'argent' => 30
+            ]
+        ];
+        //$reignsAPI->addComponent('objects', $jsonArray);
         $extras = $reignsAPI->getComponent('objects');
         return $this->render('authenticated/extra/index.html.twig', [
             'extras' => $extras,

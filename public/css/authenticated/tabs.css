@@ -2,22 +2,26 @@
     border-bottom: 1px solid #C1A767;
 }
 
-.nav-tabs > li {
+.nav-tabs > li.nav-item {
     margin: 10px;
     margin-left: 0;
-    margin-bottom: 9px;
+    margin-bottom: 0px;
 }
 
-.nav-tabs > li > a {
+.nav-tabs > li.nav-item:hover {
+    border: 0;
+}
+
+.nav-tabs > li.nav-item > a {
     padding: 10px;
     color: black;
 }
 
-.nav-tabs > li > a:hover {
+.nav-tabs > li.nav-item > a:hover {
     text-decoration: none;
 }
 
-.nav-tabs > li > a.active {
+.nav-tabs > li.nav-item > a.active {
     border-radius: 7px 7px 0 0;
     background-color: #C1A767;
     color: white;
@@ -25,4 +29,8 @@
 
 .tab-content {
     margin-top: 20px;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border: 0;
 }
