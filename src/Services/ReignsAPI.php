@@ -18,7 +18,7 @@ class ReignsAPI {
 
     public function __construct() {
         $this->httpClient = HttpClient::create();
-        $this->apiAddress = 'http://76ddcee2.ngrok.io';
+        $this->apiAddress = 'http://d988c7b4.ngrok.io';
     }
 
     /**
