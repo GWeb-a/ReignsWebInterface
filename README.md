@@ -27,7 +27,6 @@ Créer une base de données nommée "reigns" et importer le dump sql suivant :
     INSERT INTO `user` (`id`, `email`, `roles`, `password`) VALUES (
        2, 'admin@test.com', '[\"ROLE_ADMIN\"]',
        '$argon2i$v=19$m=65536,t=4,p=1$VjhqanAuOFNIbWtuRnkzVQ$UurJBdCIs0+5VNsG2eBND8hUUU6JKvaCph1Ashs70Is');
-    COMMIT;
 
 # Lancement
 Se placer dans le dossier ReignsWebInterface.
