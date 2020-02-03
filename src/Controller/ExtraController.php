@@ -9,31 +9,32 @@
 namespace App\Controller;
 
 
+use App\Form\Type\ExtraType;
 use App\Services\ReignsAPI;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ExtraController extends AbstractController {
     /**
      * @Route("/extra/", name="extra_home")
      */
-    public function index(ReignsAPI $reignsAPI) {
-        $jsonArray = [
-            'name' => 'objecttest',
-            'queryName' => 'objecttest',
-            'description' => 'a simple object description',
-            'effect' => [
-                'religion' => 10,
-                'army' => 20,
-                'population' => 10,
-                'argent' => 30
-            ]
-        ];
-        //$reignsAPI->addComponent('objects', $jsonArray);
+    public function index(Request $request, ReignsAPI $reignsAPI) {
+        $form = $this->createForm(ExtraType::class);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $jsonArray = $reignsAPI->getJsonFormat('objects', $form->getData());
+            $reignsAPI->addComponent('objects', $jsonArray);
+
+            return $this->redirectToRoute('extra_home');
+        }
+
         $extras = $reignsAPI->getComponent('objects');
         return $this->render('authenticated/extra/index.html.twig', [
             'extras' => $extras,
-            'type' => 'objet'
+            'type' => 'objet',
+            'form' => $form->createView()
         ]);
     }
 }

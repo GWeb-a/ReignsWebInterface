@@ -18,7 +18,7 @@ class ReignsAPI {
 
     public function __construct() {
         $this->httpClient = HttpClient::create();
-        $this->apiAddress = 'http://0848ae37.ngrok.io';
+        $this->apiAddress = 'http://76ddcee2.ngrok.io';
     }
 
     /**
@@ -43,5 +43,82 @@ class ReignsAPI {
         $this->httpClient->request('POST', $this->apiAddress.'/'.$name, [
             'body' => $jsonData
         ]);
+    }
+
+    /**
+     * @param string $type
+     * @param array $data
+     * @return array
+     */
+    public function getJsonFormat(string $type, array $data) : array {
+        if ($type == 'cards') {
+            $jsonArray = [
+                'name' => $data['name'],
+                'queryName' => $data['name'],
+                'character' => $data['name'],
+                'description' => $data['description'],
+                'yes' => $data['yes'],
+                'no' => $data['no'],
+                'effectgen' => [
+                    'religion' => $data['effectgen_religion'],
+                    'army' => $data['effectgen_army'],
+                    'population' => $data['effectgen_population'],
+                    'argent' => $data['effectgen_money']
+                ],
+                'effectyes' => [
+                    'religion' => $data['effectyes_religion'],
+                    'army' => $data['effectyes_army'],
+                    'population' => $data['effectyes_population'],
+                    'argent' => $data['effectyes_money']
+                ],
+                'effectno' => [
+                    'religion' => $data['effectno_religion'],
+                    'army' => $data['effectno_army'],
+                    'population' => $data['effectno_population'],
+                    'argent' => $data['effectno_money']
+                ],
+                'condition' => [
+                    'religion' => $data['condition_religion'],
+                    'army' => $data['condition_army'],
+                    'population' => $data['condition_population'],
+                    'argent' => $data['condition_money']
+                ],
+                'nextCard' => [
+                    'yes' => $data['next_card_yes'],
+                    'no' => $data['next_card_no']
+                ]
+            ];
+        }
+        else if ($type == 'characters') {
+            $jsonArray = [
+                'name' => $data['name'],
+                'queryName' => $data['name'],
+                'description' => $data['description'],
+                'img' => $data['img_address']
+            ];
+        }
+        else if ($type == 'ends') {
+            $jsonArray = [
+                'name' => $data['name'],
+                'queryName' => $data['name'],
+                'desfr' => $data['description'],
+                'img' => $data['img_address']
+            ];
+        }
+        else if ($type == 'objects') {
+            $jsonArray = [
+                'name' => $data['name'],
+                'queryName' => $data['name'],
+                'description' => $data['description'],
+                'effect' => [
+                    'religion' => $data['effect_religion'],
+                    'army' => $data['effect_army'],
+                    'population' => $data['effect_population'],
+                    'argent' => $data['effect_money']
+                ],
+            ];
+        }
+
+        return $jsonArray;
     }
 }
