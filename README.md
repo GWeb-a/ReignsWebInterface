@@ -23,11 +23,6 @@ Créer une base de données nommée "reigns" et importer le dump sql suivant :
        PRIMARY KEY (`id`),
        UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
     ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-    
-    INSERT INTO `migration_versions` (`version`, `executed_at`) VALUES (
-       '20191105072804', 
-       '2019-11-05 07:28:44'
-    );
 
     INSERT INTO `user` (`id`, `email`, `roles`, `password`) VALUES (
        2, 'admin@test.com', '[\"ROLE_ADMIN\"]',
